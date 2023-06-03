@@ -1,5 +1,5 @@
 # youtube-post
-The code you provided appears to be a Python script for uploading Instagram reels(you have to download instagram reel from a profile using [instaloader](https://instaloader.github.io/) to YouTube using the simple-youtube-api library. Here's a breakdown of the different parts of the code:
+The code you provided appears to be a Python script for uploading Instagram reels(you have to download instagram reel from a profile using [instaloader](https://instaloader.github.io/)) to YouTube using the simple-youtube-api library. Here's a breakdown of the different parts of the code:
 
 ## Importing necessary modules:
 ```
