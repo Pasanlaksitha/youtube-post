@@ -2,21 +2,22 @@
 The code you provided appears to be a Python script for uploading Instagram reels to YouTube using the simple-youtube-api library. Here's a breakdown of the different parts of the code:
 
 Importing necessary modules:
-python
-Copy code
+'''
 import os
 import random
 import datetime
 from simple_youtube_api.Channel import Channel
 from simple_youtube_api.LocalVideo import LocalVideo
 import sys
+
+'''
 This block imports the required modules for the program, including os for file operations, random for selecting a random file, datetime for working with dates and times, Channel and LocalVideo classes from simple-youtube-api for YouTube operations, and sys for system-related functionalities.
 
 Authenticating and initializing the YouTube channel:
-python
-Copy code
+'''
 channel = Channel()
 channel.login("client-secret.json", "credentials.storage")
+'''
 Here, the Channel object is created, and the login method is used to authenticate the YouTube channel using the provided client secret file and credentials storage file.
 
 Defining the media directory:
@@ -27,7 +28,7 @@ The path variable specifies the directory where the Instagram reels media files 
 
 File handling functions:
 python
-Copy code
+'''
 def filehandler():
     mp4_files = [f for f in os.listdir(path) if f.endswith(".mp4")]
     random_file = random.choice(mp4_files)
@@ -43,6 +44,9 @@ def delete(filename):
     mp4 = filename + ".mp4"
     os.remove(os.path.join(path, text_file))
     os.remove(os.path.join(path, mp4))
+    
+ '''
+ 
 These functions are responsible for handling files. filehandler() selects a random ".mp4" file from the media directory. captionfile(name) reads the lines of a caption file (assumed to be in UTF-8 encoding) specified by the name argument. delete(filename) deletes the caption file and the corresponding ".mp4" file.
 
 Uploading video function:
